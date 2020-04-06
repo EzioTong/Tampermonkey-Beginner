@@ -1,0 +1,19 @@
+// ==UserScript==
+// @name         去除CSDN验证登录
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       me
+// @match        https://blog.csdn.net/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+    document.getElementById('article_content').removeAttribute('style');
+    var del = document.getElementsByClassName('hide-article-box')[0].remove();
+    del.parentNode.removeChild(del[0]);
+    scrollTo(0,0);
+})();
